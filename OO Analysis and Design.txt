@@ -1,0 +1,16 @@
+
+OO Analysis and Design is a structured method for analysing and designing a system by applying object-oriented concepts
+
+PROCESS:
+Identifying the objects in a system
+Defining relationships between objects
+Establishing the interface of each object
+making a design which can be converted to executables using OO languages
+
+
+Unified Modelling Language (UML) is a powerful language that can represent all the concepts
+that exists in OO analysis and design. 
+Unified Modeling Language (UML) A visual language for specifying, constructing, and documenting the artifacts of systems.
+
+A UseCase diagram is used to describe a set of user scenarios. This diagram answers what the system does from the users POV.
+A Class diagram is used to describe structure and behavior in the use cases. It provides a conceptual model of the system in terms of entites and their relationships.

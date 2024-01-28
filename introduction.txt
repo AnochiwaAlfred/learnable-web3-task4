@@ -1,0 +1,66 @@
+Inheritance is a mechanism in OOP languages that allows us to create new classes using existing ones
+by inheriting characteristics from those classes. Essentially it allows us to form a hierarchy
+where each class is derived from another class.
+The following terms are related to inheritance:
+- Base Class / Superclass / Parent Class – The class from which we derive other classes.
+- Derived Class / Subclass / Child Class – The class that is derived from another class.
+
+
+
+
+Polymorphism is the ability of an object to take different forms.
+In Object-Oriented Programming (OOP), polymorphism refers to a feature where data and
+methods can be reused with different classes, even though they may have different structures or implementations. This
+methods can be reused with different classes, even though they may have different structures or behavior. This
+methods can be reused with different classes, even though they are not related by inheritance or implementation.
+methods belonging to classes with an IS-A relationship can be used as objects of other
+classes that have a HAS-A relationship with them. This means, if class A has an
+object obj1 of class B, we can use obj1 like an object of class B even though
+it’s actually an instance of class A.
+There are two types of polymorphism:
+1. Compile Time Polymorphism or Static Polymorphism - In this type of
+polymorphism, method overloading occurs at compile time i.e., the compiler decides
+which function to call based on the number and type of arguments passed. It's also
+known as Method Overloading.
+2. Run Time Polymorphism or Dynamic Polymorphism - In this type of
+polymorphism, method overriding occurs during runtime. The decision about which
+function to call is made by the runtime system based on the actual object being
+pointed to. It's also known as Function Overriding.
+
+
+
+
+Encapsulation is the method of binding data together into a single entity and hiding or protecting the data
+from external sources or the outside world.
+It involves three main components:
+1. Data Hiding – The process of restricting direct access to some of the attributes
+of a class. These attributes are hidden from outside the class and can only be accessed through methods provided
+of a class. These attributes are hidden from outside classes so that they cannot directly modify
+or misuse them. They can only interact with these members through methods provided for
+them.
+2. Abstraction – The process of providing a simplified interface to the users by showing
+only essential features of the class while keeping the rest hidden. An abstract class is one
+that contains one or more pure virtual functions (functions without any code in their bodies).
+3. Modularity – Breaking down large systems into smaller independent units called modules.
+Each module represents a self-contained piece of functionality within the software
+system.
+
+
+
+Abstraction helps by hiding internal implementation details of objects and only revealing operations that are relevant to other objects.
+Classes vs Structures
+-----------------------
+Structures and Classes both represent entities in OOP but there are key differences between them:
+1. Default Access Specifier: In C++, structures do not have a default access specifier unlike
+classes which have public as their default access specifier. So, in case of structure, all its
+members are public by default whereas in class, it's private.
+2. Constructors and Destructors: Classes have constructors and destructors whereas structures
+do not.
+3. Inheritance: Both structures and classes support inheritance but structures do not support multiple
+inheritance whereas classes do.
+4. Use Case: Structures are generally used when you want to group related variables
+together whereas classes are used when you want to create objects with behavior(methods)
+and state(variables).
+
+
+
