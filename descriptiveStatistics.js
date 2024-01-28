@@ -1,5 +1,8 @@
 
 
+
+
+
 // 1. Create a class that has class/static properties and methods. Show how to use/access them.
 
 
@@ -35,7 +38,7 @@ class MathUtility{
 
 
 // Use Case
-
+console.log('-----------------------Question 1------------------------ \n ')
 console.log(`PI: ${MathUtility.pi}`);
 console.log(`Gas Constant: ${MathUtility.R}`);
 console.log(`Faradays Constant: ${MathUtility.F}`);
@@ -46,6 +49,7 @@ console.log(`Addition: ${MathUtility.add(5, 3)}`);
 console.log(`Subtraction: ${MathUtility.subtract(8, 3)}`);
 console.log(`Multiplication: ${MathUtility.multiply(4, 7)}`);
 console.log(`Division: ${MathUtility.divide(10, 2)}`);
+console.log('\n-----------------------End of Question 1------------------------ \n \n \n \n \n ')
 
 
 
@@ -233,6 +237,7 @@ class Statistically{
 
 }
 
+console.log('-----------------------Question 2------------------------ \n ')
 
 dataset = [2, 14, 20, 92, 92, 14, 45, 93, 61, 23, 4]
 console.log(`Mean -- ${Statistically.mean(dataset)}`)
@@ -243,108 +248,5 @@ console.log(`Standard Deviation -- ${Statistically.stanDev(dataset)}`)
 console.log(`Range -- ${Statistically.range(dataset)}`)
 console.log(`Coefficient of Variation -- ${Statistically.coefVar(dataset)}`)
 console.log(`InterQuartile Range -- ${Statistically.iqr(dataset)}`)
+console.log('\n-----------------------End of Question 2------------------------ \n \n \n \n \n ')
 
-
-
-
-
-
-// 3. You will work on a simple Movie renting API(An App, a simple one) that lets people rent movies from a movie store. 
-//     By applying everything learnt so far, you will build out your movie renting API using ES6 JavaScript Classes and Objects/Functions 
-//     where needed.
-
-
-class Movie {
-    constructor(id,title, genre, releaseYear, availableCopies) {
-        this.id=id
-        this.title = title;
-        this.genre = genre;
-        this.releaseYear = releaseYear;
-        this.availableCopies = availableCopies;
-        this.rentedCopies = 0;
-    }
-  
-    rentMovie() {
-      if (this.availableCopies > 0) {
-        this.availableCopies--;
-        this.rentedCopies++;
-        console.log(`${this.title} rented successfully.`);
-      } else {
-        console.log(`${this.title} is currently not available for rent.`);
-      }
-    }
-  
-    returnMovie() {
-      if (this.rentedCopies > 0) {
-        this.availableCopies++;
-        this.rentedCopies--;
-        console.log(`${this.title} returned successfully.`);
-      } else {
-        console.log(`${this.title} has no rented copies.`);
-      }
-    }
-  
-    displayInfo() {
-      console.log(`
-        ID: ${this.id} 
-        Title: ${this.title}
-        Genre: ${this.genre}
-        Release Year: ${this.releaseYear}
-        Available Copies: ${this.availableCopies}
-        Rented Copies: ${this.rentedCopies}
-      `);
-    }
-  }
-  
-  class MovieStore {
-    constructor() {
-      this.movies = [];
-    }
-  
-    addMovie(movie) {
-      this.movies.push(movie);
-      console.log(`${movie.title} added to the movie store.`);
-    }
-  
-    rentMovie(title) {
-      const movie = this.movies.find(movie => movie.id === id);
-      if (movie) {
-        movie.rentMovie();
-      } else {
-        console.log(`Movie with ID ${id} not found.`);
-      }
-    }
-  
-    returnMovie(title) {
-      const movie = this.movies.find(movie => movie.title === title);
-      if (movie) {
-        movie.returnMovie();
-      } else {
-        console.log(`Movie with title ${title} not found.`);
-      }
-    }
-  
-    displayMovies() {
-      console.log("Movies in the store:");
-      this.movies.forEach(movie => {
-        movie.displayInfo();
-      });
-    }
-  }
-  
-  // Usage:
-  const movieStore = new MovieStore();
-  
-  const movie1 = new Movie("1", "Lift", "Action/Comedy", 2024, 5);
-  const movie2 = new Movie("2", "They Cloned Tyrone", "Mystery/Sci-fi ", 2023, 3);
-  
-  movieStore.addMovie(movie1);
-  movieStore.addMovie(movie2);
-  
-  movieStore.displayMovies();
-  
-  movieStore.rentMovie("1");
-  movieStore.returnMovie("2");
-  
-  movieStore.displayMovies();
-  
